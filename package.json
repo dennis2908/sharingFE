@@ -51,7 +51,7 @@
     "react-scripts": "^4.0.3"
   },
   "scripts": {
-    "start": "react-scripts",
+    "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "test:cov": "npm test -- --coverage --watchAll=false",
@@ -80,7 +80,7 @@
     ]
   },
   "engines": {
-    "node": "<17",
+    "node": ">=17",
     "npm": ">=6"
   }
 }
