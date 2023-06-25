@@ -7,10 +7,6 @@
 - buka cmd di dir folder dan tekan yarn install </br>
 - npm install </br>
 - npm start </br>
-
-# Versi web : </br>
-
-- https://fesharing.herokuapp.com </br>
 - Credential  </br>
   username : console </br>
   password : myconsole </br>
