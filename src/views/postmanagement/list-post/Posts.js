@@ -108,7 +108,7 @@ const Users = ({ match }) => {
     e.preventDefault();
     let id = FormData.Id
     // let formData = arrayRemove(FormData, "id");
-    await fetch("https://apisharing.herokuapp.com/articleUpdate/" + id, {
+    await fetch("http://localhost:9333/articleUpdate/" + id, {
       method: "put",
       headers: {
         'Accept': 'application/json'
@@ -155,7 +155,7 @@ const Users = ({ match }) => {
 
   async function MyfetchData() {
     setLoading(true)
-    await fetch("https://apisharing.herokuapp.com/article/5/0/publish"
+    await fetch("http://localhost:9333/article/5/0/publish"
     ).then(res => res.json())
       .then(
         (result) => {
@@ -182,7 +182,7 @@ const Users = ({ match }) => {
   async function countData() {
     setLoading(true)
     setPage(1)
-    await fetch("https://apisharing.herokuapp.com/CountArticle/"
+    await fetch("http://localhost:9333/CountArticle/"
     ).then(res => res.json())
       .then(
         (result) => {
@@ -213,7 +213,7 @@ const Users = ({ match }) => {
   async function MyfetchDataDraft() {
     setLoading(true)
     setPageDraft(1)
-    await fetch("https://apisharing.herokuapp.com/article/5/0/draft"
+    await fetch("http://localhost:9333/article/5/0/draft"
     ).then(res => res.json())
       .then(
         (result) => {
@@ -239,7 +239,7 @@ const Users = ({ match }) => {
   async function MyfetchDataThrash() {
     setLoading(true)
     setPageThrash(1)
-    await fetch("https://apisharing.herokuapp.com/article/5/0/thrash"
+    await fetch("http://localhost:9333/article/5/0/thrash"
     ).then(res => res.json())
       .then(
         (result) => {
@@ -267,7 +267,7 @@ const Users = ({ match }) => {
     setLoading(true)
     console.log(FormDataView)
     e.preventDefault();
-    await fetch("https://apisharing.herokuapp.com/articleToTrash/" + FormDataView.id,
+    await fetch("http://localhost:9333/articleToTrash/" + FormDataView.id,
       {
         method: "put"
       }
@@ -297,7 +297,7 @@ const Users = ({ match }) => {
   }, []);
   async function pageChange(newPage) {
     setPage(newPage)
-    await fetch("https://apisharing.herokuapp.com/article/5/"+(5 * (parseInt(newPage) - 1))+"/publish")
+    await fetch("http://localhost:9333/article/5/"+(5 * (parseInt(newPage) - 1))+"/publish")
       .then(res => res.json())
       .then(
         (result) => {
@@ -320,7 +320,7 @@ const Users = ({ match }) => {
 
   async function pageChangeDraft(newPage) {
     setPageDraft(newPage)
-    await fetch("https://apisharing.herokuapp.com/article/5/"+(5 * (parseInt(newPage) - 1))+"/draft")
+    await fetch("http://localhost:9333/article/5/"+(5 * (parseInt(newPage) - 1))+"/draft")
       .then(res => res.json())
       .then(
         (result) => {
@@ -342,7 +342,7 @@ const Users = ({ match }) => {
 
   async function pageChangeThrash(newPage) {
     setPageThrash(newPage)
-    await fetch("https://apisharing.herokuapp.com/article/5/"+(5 * (parseInt(newPage) - 1))+"/thrash")
+    await fetch("http://localhost:9333/article/5/"+(5 * (parseInt(newPage) - 1))+"/thrash")
       .then(res => res.json())
       .then(
         (result) => {

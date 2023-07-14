@@ -89,7 +89,7 @@ const CreateUser = () => {
     }
 
     console.log(formData)
-    await fetch("https://apisharing.herokuapp.com/article/", {
+    await fetch("http://localhost:9333/article/", {
       method: "post",
       headers: {
         'Accept': 'application/json'

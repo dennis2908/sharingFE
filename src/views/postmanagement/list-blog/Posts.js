@@ -89,7 +89,7 @@ const Users = ({ match }) => {
 
   async function MyfetchData() {
     setLoading(true)
-    await fetch("https://apisharing.herokuapp.com/article/5/0/publish"
+    await fetch("http://localhost:9333/article/5/0/publish"
     ).then(res => res.json())
       .then(
         (result) => {
@@ -121,7 +121,7 @@ const Users = ({ match }) => {
     setLoading(true)
     console.log(newPage)
     setPage(newPage)
-    await fetch("https://apisharing.herokuapp.com/article/5/"+(5 * (parseInt(newPage) - 1))+"/publish")
+    await fetch("http://localhost:9333/article/5/"+(5 * (parseInt(newPage) - 1))+"/publish")
       .then(res => res.json())
       .then(
         (result) => {
