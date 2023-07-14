@@ -1,4 +1,8 @@
 ```
+built with react, node v16.1
+```
+
+```
 docker compose build
 ```
 
