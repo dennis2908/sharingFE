@@ -1,0 +1,9 @@
+version: '3.9'
+
+services:
+  reactsharingfe:
+    container_name: reactsharingfe
+    image: reactsharingfe/1
+    build: .
+    ports:
+      - "3000:3000"
